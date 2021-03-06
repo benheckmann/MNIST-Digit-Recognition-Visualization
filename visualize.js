@@ -1,7 +1,7 @@
 let showProcessing = (elementId)=>{
     let parent = document.querySelector(elementId);
     let img = document.createElement('img');
-    img.setAttribute('src', 'https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif');
+    //img.setAttribute('src', 'https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif');
     img.style.position = 'absolute';
     img.width = '200';
     img.style.left = '15%';
@@ -14,7 +14,7 @@ function delay() {
   var promise = new Promise(function(resolve, reject) {
     window.setTimeout(function() {
       resolve();
-    },1000);
+    },0); // ... --
   });
   return promise;
 }
@@ -53,7 +53,7 @@ var svg = d3.select(elementId)
   .attr("transform",
         "translate(" + 50 + "," + 40 + ")");
 
-//Read the data
+// read the data
 let data = activations;
 
 console.log(data)
@@ -75,7 +75,7 @@ var myGroups = d3.map(data, function(d){return d.group;}).keys()
 
   var myColor = d3.scaleLinear()
     .domain([0,0.25,0.5,0.75,1])
-    .range(['#ed6c72','#e75665', '#e73735', '#d7322f', '#63f542']); //'#d80909']); wieder rückgängig machen 
+    .range(['#ed6c72','#e75665', '#e73735', '#d7322f', '#63f542']); //'#d80909']); ... -- 
 
 
   var tooltip = d3.select(elementId)
